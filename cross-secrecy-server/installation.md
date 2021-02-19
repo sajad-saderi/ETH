@@ -46,7 +46,7 @@ docker-compose up
 
 or manually:
 ```bash
-docker pull gitlab2.informatik.uni-wuerzburg.de:4567/sss-group/ehl/ethical-hacking-lab-ii-exercises/xss
+docker pull gitlab2.informatik.uni-wuerzburg.de:4567/moritz.finke/attack-the-web-xss
 ```
 
 # Configuration
