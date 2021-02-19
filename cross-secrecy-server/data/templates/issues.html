@@ -1,0 +1,19 @@
+{% extends "content.html" %}
+
+{% block title %}
+Issues
+{% end %}
+{% block content %}
+		<ul class='collection'>
+    {% for issue in issues %}
+			<li class='collection-item avatar'>
+				<img src='data:image/bmp;base64,{{ issue.image }}' alt='' class='circle'>
+	      <span class='title'>{{issue.author}} at {{issue.date}}</span>
+	      <p>
+					{{issue.subject}}
+	      </p>
+				<a href='/issues/{{issue.id}}' class='secondary-content'><i class='material-icons blue-text'>add_circle</i></a>
+			</li>
+    {% end %}
+		</ul>
+{% end %}

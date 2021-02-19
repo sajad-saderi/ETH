@@ -1,0 +1,100 @@
+{% extends "content.html" %}
+
+{% block title %}
+Chat {{chat.id}} 
+<a class="btn blue" onclick="window.location.reload(false);">
+Sync <i class="material-icons right">sync</i>
+</a>
+{% end %}
+{% block content %}
+<div id="chat" class="section chat">
+  {% for message in chat.get_messages() %}
+  <div class="row">
+      {% if message.is_from_viewer() %}
+    <div class="col offset-s1 offset-m4 offset-xl6 s11 m8 xl6">
+      <div class="message-owner">
+      {% else %}
+    <div class="col s11 m8 xl6">
+      <div class="message">
+      {% end %}
+      {% if not message.is_from_viewer() %}
+        <p class="message-author">{{ message.user }}</p>
+      {% end %}
+        <div class="message-text">
+          {% raw chat_escape(message.text) %}
+        </div>
+        <p class="message-date">{{ message.date }}</p>
+      </div>
+    </div>
+  </div>
+  {% end %}
+</div>
+<script>
+function gotoBottom(id){
+   var element = document.getElementById(id);
+   element.scrollTop = element.scrollHeight - element.clientHeight;
+}
+  gotoBottom("chat");
+</script>
+<div class="section">
+  <div class="row">
+    <form class="col s12" action="/chat/post" method="post">
+  {% module xsrf_form_html() %}
+        <input type="hidden" name="chat" value="{{chat.id}}" />
+        <div class="input-field col s12 m10">
+          <textarea id="input" class="materialize-textarea" name="message" type="text"></textarea>
+          <label for="input">New Message</label>
+        </div>
+        <div class="col s6 m2 xl2">
+          <button class="btn-floating green" type="submit" name="action">
+            <i class="material-icons right">send</i>
+          </button>
+        </div>
+    </form>
+  </div>
+  <div class="row">
+    <div class="col s12 offset-m6 m6 grey-text">
+      You can use <em>markdown-styling</em> in your messages!
+    </div>
+  </div>
+</div>
+<div class="section">
+  <div class="row">
+      <ul class="collection with-header">
+          <li class="collection-header"><h4>Chat Members</h4></li>
+      {% for user in chat.get_participants() %}
+          <li class="collection-item">{{user}}</li>
+      {% end %}
+          <li class="collection-item">
+            <div class="row">
+            <div class="col s12 m8">
+            <form action="/chat/add" method="post">
+          {% module xsrf_form_html() %}
+                <input type="hidden" name="chat" value="{{chat.id}}" />
+                <div class="input-field col s8">
+                  <input id="user" name="user" type="text">
+                  <label for="user">Username</label>
+                </div>
+                <div class="col s4">
+                  <button class="btn-small blue" type="submit" name="action">
+                    Add User
+                  </button>
+                </div>
+            </form>
+            </div>
+            <div class="col s12 m4">
+            <form  action="/chat/add" method="post">
+          {% module xsrf_form_html() %}
+                <input type="hidden" name="chat" value="{{chat.id}}" />
+                <input type="hidden" name="user" value="admin" />
+                    <button class="btn blue" type="submit" name="action">
+                      Involve Admin
+                    </button>
+            </form>
+            </div>
+            </div>
+          </li>
+    </ul>
+  </div>
+</div>
+{% end %}

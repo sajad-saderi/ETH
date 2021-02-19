@@ -1,0 +1,94 @@
+
+/*
+ * Copyright 2009 Facebook
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License"); you may
+ * not use this file except in compliance with the License. You may obtain
+ * a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+ * WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+ * License for the specific language governing permissions and limitations
+ * under the License.
+ */
+/* fallback */
+@font-face {
+  font-family: 'Material Icons';
+  font-style: normal;
+  font-weight: 400;
+  src: url(/static/material.woff2) format('woff2');
+}
+
+.material-icons {
+  font-family: 'Material Icons';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;
+  line-height: 1;
+  letter-spacing: normal;
+  text-transform: none;
+  display: inline-block;
+  white-space: nowrap;
+  word-wrap: normal;
+  direction: ltr;
+  -moz-font-feature-settings: 'liga';
+  -moz-osx-font-smoothing: grayscale;
+}
+
+  body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+  }
+
+  main {
+    flex: 1 0 auto;
+  }
+
+.chat {
+  overflow-y:scroll;
+  height:500px;
+}
+
+.message {
+  border-radius: 1em;
+  padding-left: 1em;
+  padding-right: 1em;
+  background-color: #EE6E73 ;
+}
+.message-owner {
+  border-radius: 1em;
+  padding-left: 1em;
+  padding-top: 0.6em;
+  padding-right: 1em;
+  background-color: #2196f3;
+}
+.message-author {
+  color:#fff;
+  font-weight: bold;
+  padding-top: 1.2em;
+}
+.message-date {
+  color:#fff;
+  font-size: 0.8em;
+  font-weight: bold;
+  padding-bottom: 1em;
+  text-align: right;
+}
+.message-text {
+  color:#eee;
+  padding-left: 1em;
+}
+
+.message-text a {
+  color:#eee;
+  text-decoration: underline;
+  padding-left: 1em;
+}
+
+strong {
+  font-weight: 900 !important;
+}

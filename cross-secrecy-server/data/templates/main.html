@@ -1,0 +1,43 @@
+{% extends "content.html" %}
+
+{% block title %}
+IT-Administration
+{% end %}
+{% block content %}
+<div class="section">
+  <div class="row">
+    <div class="col s12 m6">
+      <div class="card">
+        <div class="card-image">
+          <a href="/issues/">
+            <img src="/static/img/issues.jpg">
+          </a>
+          <span class="card-title">Issues</span>
+        </div>
+        <div class="card-content">
+          <p>Manage latest issues</p>
+        </div>
+        <div class="card-action">
+          <a href="/issues/">Issues</a>
+        </div>
+      </div>
+    </div>
+    <div class="col s12 m6">
+      <div class="card">
+        <div class="card-image">
+          <a href="/chat/">
+            <img src="/static/img/chat.jpg">
+          </a>
+          <span class="card-title">Staff-Chat</span>
+        </div>
+        <div class="card-content">
+          <p>Help out staff in direct group chat</p>
+        </div>
+        <div class="card-action">
+          <a href="/chat/">Chat</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% end %}

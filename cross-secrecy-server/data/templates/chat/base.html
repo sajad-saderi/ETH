@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>{{ escape(handler.settings["title"]) }}</title>
+    <link rel="stylesheet" href="{{ static_url("panel.css") }}" type="text/css">
+    <link type="text/css" rel="stylesheet" href="/static/materialize.min.css"  media="screen,projection"/>
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    {% block head %}{% end %}
+  </head>
+  <body>
+    <header>
+        <nav>
+          <div class="nav-wrapper">
+            <a href="/" class="brand-logo center">{{ escape(handler.settings["title"]) }}</a>
+            <ul id="nav-mobile" class="right">
+                <li>
+                  <form action="/logout" method="post">
+                    {% module xsrf_form_html() %}
+                    <button class="btn blue" type="submit" name="action">
+                      Sign Out
+                    </button>
+                  </form>
+                </li>
+            </ul>
+          </div>
+        </nav>
+    </header>
+    <main>
+      {% block body %}{% end %}
+    </main>
+     <footer class="page-footer">
+      {% block bottom %}{% end %}
+      <div class="container">
+        <div class="row">
+          <div class="col l6 s12">
+            <h5 class="white-text">Cross Secrecy</h5>
+            <p class="grey-text text-lighten-4">We guarantee secrecy all across the world</p>
+          </div>
+        </div>
+      </div>
+      <div class="footer-copyright">
+        <div class="container">
+        © 2020 Cross-Secrecy
+        </div>
+      </div>
+    </footer>
+    <script type="text/javascript" src="/static/materialize.min.js"></script>
+    <script type="text/javascript" src="/static/panel.js"></script>
+  </body>
+</html>
