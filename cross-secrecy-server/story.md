@@ -20,8 +20,7 @@ communication. The administrators decided to incorporate the chat server into
 their web panel and allow workers to _involve_ administrators into their group
 chats whenever there is a technical problem they cannot solve.
 
-You were hired as a white hat to evaluate the security of Cross-Secrecy's IT
-network. Convinced of their secure implementation, the administrators happily
-shared the code for their web panel with you.
-Prove to the administrators that their solution is not secured against
-maliciously forged packets.
+You were hired as a white hat to evaluate the security of Cross-Secrecy's
+IT-network. Convinced of their secure implementation, the administrators
+happily shared the code of their web panel with you.  Prove to the
+administrators that their solution is not secured against XSS attacks.
