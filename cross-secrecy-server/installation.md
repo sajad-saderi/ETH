@@ -16,6 +16,8 @@ and run it via
 
 ```bash
 cross-secrecy-servers --database=[DATABASE-PATH] --data=[PATH-TO-STATIC-AND-TEMPLATES]
+# Example for this workdir:
+cross-secrecy-servers --database=./database/database.sqlite3 --data=./data
 ```
 
 ## Docker Build
