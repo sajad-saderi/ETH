@@ -1,6 +1,6 @@
 # Installation
 
-Have a Linux machine at your hands. There are three methods for installing
+Have a Linux machine at your hands. There are four methods for installing
 Cross-Secrecy's server. It is recommended to do the third one (pull a docker
 image).
 
