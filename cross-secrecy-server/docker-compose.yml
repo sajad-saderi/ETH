@@ -1,5 +1,5 @@
 version: "3.7"
-# First, login at the university's docker repo: "docker login gitlab2.informatik.uni-wuerzburg.de:4567"
+# If necessary, login at the university's docker repo: "docker login gitlab2.informatik.uni-wuerzburg.de:4567"
 # To run the container, execute "docker-compose up" in this folder.
 # Stop the container with "docker-compose stop"
 # Run detached via "docker-compose up -d"
