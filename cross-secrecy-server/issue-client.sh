@@ -10,7 +10,7 @@ fi
 echo -n "Port [3333]: "
 read port
 if [ -z "$port" -a "$port" != " " ]; then
-  port=4321
+  port=3333
 fi
 echo -n "Enter your name: "
 read name
