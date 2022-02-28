@@ -47,7 +47,8 @@ def get_issue() -> Issue:
     issue = Issue(id= database.get_next_id(threading = True),
         author=names.get_full_name(),
         subject=lorem.get_sentence(),
-        description=lorem.get_paragraph(random.randint(1,4)), date=str(datetime.now()),
+        description=lorem.get_paragraph(random.randint(1,4)),
+        date=datetime.now().strftime("%m/%d/%Y, %H:%M:%S"),
         image= image)
     return issue
 

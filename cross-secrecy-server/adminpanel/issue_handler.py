@@ -45,7 +45,7 @@ class IssuePostHandler(tornado.web.RequestHandler):
         subject = self.args['subject']
         description = self.args['description']
         image = self.args['image']
-        date = str(datetime.now())
+        date = datetime.now().strftime("%m/%d/%Y, %H:%M:%S")
         id_ = database.get_next_id()
         issue = Issue(author,subject,description,image,id=id_,date=date)
 

@@ -24,6 +24,11 @@ class ChatMainHandler(BaseHandler):
         self.render('chat/main.html', chats=chats, user=self.get_current_user())
 
 class ChatHandler(BaseHandler):
+    def set_default_headers(self):
+        # who has put those headers here?!
+        self.set_header('Access-Control-Allow-Origin', '*')
+        self.set_header('Access-Control-Allow-Methods', 'POST, GET, OPTIONS')
+
     def get(self, slug):
         if not self.get_current_user():
             self.redirect("/login")
