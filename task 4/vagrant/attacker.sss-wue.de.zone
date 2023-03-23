@@ -1,0 +1,12 @@
+$ORIGIN attacker.sss-wue.de.
+$TTL 3600
+
+; By defining an origin and TTL above, we can substitute @ for the base domain
+; and leave out the TTL
+
+@ IN SOA ns.attacker.sss-wue.de. some.email.address. (1 86400 3600 3600000 60)
+IN NS ns.attacker.sss-wue.de
+@ IN A 192.168.87.10
+
+; This is a so-called wildcard DNS record, valid for all subdomains
+* IN A 192.168.87.10 

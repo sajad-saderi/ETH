@@ -1,0 +1,77 @@
+Certificate:
+    Data:
+        Version: 3 (0x2)
+        Serial Number:
+            87:9f:3e:91:5f:37:f0:b3:75:9d:df:e3:12:c4:65:66
+        Signature Algorithm: ecdsa-with-SHA512
+        Issuer: CN=Easy-RSA CA
+        Validity
+            Not Before: Mar 23 08:00:38 2023 GMT
+            Not After : Jun 25 08:00:38 2025 GMT
+        Subject: C=AU, ST=Some-State, L=city, O=Internet Widgits Pty Ltd, OU=it, CN=seyed/emailAddress=eth@eth.com
+        Subject Public Key Info:
+            Public Key Algorithm: rsaEncryption
+                RSA Public-Key: (2048 bit)
+                Modulus:
+                    00:d6:d0:cf:b0:bb:0a:aa:a9:3f:25:4c:02:4a:0e:
+                    b2:55:31:b9:c9:ab:ab:f9:2c:f9:b5:78:a8:98:c2:
+                    d0:67:27:cc:f4:8f:5a:4c:cc:18:72:f6:91:9c:14:
+                    fc:f9:4b:02:9d:78:c7:cc:25:06:31:93:2c:6c:c5:
+                    31:45:ca:5c:bf:7e:d9:0a:66:59:62:60:85:4b:6a:
+                    47:3c:0b:8d:26:a4:5f:d8:d0:75:7c:3f:d1:c5:41:
+                    cb:ce:83:d4:c7:53:92:2b:04:8c:4e:41:ac:2a:3e:
+                    ff:3b:60:73:f9:3a:8d:8b:b9:25:a5:f3:2f:20:89:
+                    9a:44:93:73:5c:47:1a:fc:60:7d:0c:01:c6:90:2a:
+                    ef:ae:f7:69:5a:00:f2:0d:9e:1c:92:81:be:d2:be:
+                    54:7a:e1:d4:b6:df:08:bc:21:45:e1:42:83:b2:04:
+                    b8:3b:6b:46:55:40:f1:37:da:48:3f:42:5a:8e:79:
+                    50:0a:14:3b:e3:e5:23:97:b1:98:54:a0:e6:45:8d:
+                    1b:f5:a7:03:55:86:a5:54:4a:9e:7c:ba:96:d0:3e:
+                    99:5c:59:52:d9:04:c2:77:5a:bd:ee:5c:89:c5:aa:
+                    9b:c1:bb:9b:c1:9d:74:74:bc:26:8c:59:12:38:be:
+                    ab:38:9b:3c:e8:bb:a4:68:22:d4:6e:4e:55:73:7e:
+                    4d:17
+                Exponent: 65537 (0x10001)
+        X509v3 extensions:
+            X509v3 Basic Constraints:
+                CA:FALSE
+            X509v3 Subject Key Identifier:
+                3E:60:1F:8D:A4:F2:81:7E:48:24:59:7A:D0:1B:1A:9E:DB:C6:3D:13
+            X509v3 Authority Key Identifier:
+                keyid:A1:07:4A:D8:AA:91:F0:D3:9A:BA:B4:D3:1D:F0:14:31:93:76:95:56
+                DirName:/CN=Easy-RSA CA
+                serial:4E:E4:90:7D:12:4C:39:92:4C:60:3C:5D:33:B1:E8:83:24:46:18:C5
+
+            X509v3 Extended Key Usage:
+                TLS Web Server Authentication
+            X509v3 Key Usage:
+                Digital Signature, Key Encipherment
+            X509v3 Subject Alternative Name:
+                DNS:seyed
+    Signature Algorithm: ecdsa-with-SHA512
+         30:65:02:30:5c:c0:05:03:45:55:29:cd:21:19:9a:3d:12:ea:
+         b2:f2:b9:d1:e7:4a:91:59:69:0b:58:2d:ca:e0:ed:b9:15:45:
+         47:0a:92:52:d8:c8:31:ef:fd:74:0b:46:54:34:3a:f8:02:31:
+         00:aa:a1:64:20:b1:b2:60:19:9c:e1:2c:27:20:91:3d:c3:22:
+         c7:9a:c1:85:fa:0a:8b:25:59:09:98:ee:58:f1:a9:95:44:18:
+         84:d6:a2:cf:ac:08:63:fc:c4:45:60:85:a6
+-----BEGIN CERTIFICATE-----
+MIIDQzCCAsmgAwIBAgIRAIefPpFfN/CzdZ3f4xLEZWYwCgYIKoZIzj0EAwQwFjEU
+MBIGA1UEAwwLRWFzeS1SU0EgQ0EwHhcNMjMwMzIzMDgwMDM4WhcNMjUwNjI1MDgw
+MDM4WjCBjTELMAkGA1UEBhMCQVUxEzARBgNVBAgMClNvbWUtU3RhdGUxDTALBgNV
+BAcMBGNpdHkxITAfBgNVBAoMGEludGVybmV0IFdpZGdpdHMgUHR5IEx0ZDELMAkG
+A1UECwwCaXQxDjAMBgNVBAMMBXNleWVkMRowGAYJKoZIhvcNAQkBFgtldGhAZXRo
+LmNvbTCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBANbQz7C7CqqpPyVM
+AkoOslUxucmrq/ks+bV4qJjC0GcnzPSPWkzMGHL2kZwU/PlLAp14x8wlBjGTLGzF
+MUXKXL9+2QpmWWJghUtqRzwLjSakX9jQdXw/0cVBy86D1MdTkisEjE5BrCo+/ztg
+c/k6jYu5JaXzLyCJmkSTc1xHGvxgfQwBxpAq7673aVoA8g2eHJKBvtK+VHrh1Lbf
+CLwhReFCg7IEuDtrRlVA8TfaSD9CWo55UAoUO+PlI5exmFSg5kWNG/WnA1WGpVRK
+nny6ltA+mVxZUtkEwndave5cicWqm8G7m8GddHS8JoxZEji+qzibPOi7pGgi1G5O
+VXN+TRcCAwEAAaOBtDCBsTAJBgNVHRMEAjAAMB0GA1UdDgQWBBQ+YB+NpPKBfkgk
+WXrQGxqe28Y9EzBRBgNVHSMESjBIgBShB0rYqpHw05q6tNMd8BQxk3aVVqEapBgw
+FjEUMBIGA1UEAwwLRWFzeS1SU0EgQ0GCFE7kkH0STDmSTGA8XTOx6IMkRhjFMBMG
+A1UdJQQMMAoGCCsGAQUFBwMBMAsGA1UdDwQEAwIFoDAQBgNVHREECTAHggVzZXll
+ZDAKBggqhkjOPQQDBANoADBlAjBcwAUDRVUpzSEZmj0S6rLyudHnSpFZaQtYLcrg
+7bkVRUcKklLYyDHv/XQLRlQ0OvgCMQCqoWQgsbJgGZzhLCcgkT3DIseawYX6Cosl
+WQmY7ljxqZVEGITWos+sCGP8xEVghaY=
+-----END CERTIFICATE-----

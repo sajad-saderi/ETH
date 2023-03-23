@@ -1,0 +1,74 @@
+# encoding: utf-8
+# -*- mode: ruby -*-
+# vi: set ft=ruby :# Box / OS
+
+VAGRANT_BOX = 'bento/ubuntu-20.04'
+
+# Memorable name for your
+VM_WEB = 'web'
+VM_CLI = 'cli'
+VM_ATK = 'atk'
+
+VM_MEM = 2048
+VM_CPU = 2
+
+# VM User — 'vagrant' by default
+VM_USER = 'vagrant'
+
+# Username on your User
+#TODO
+HOST_USER = 'dell'
+
+# Host folder to sync MAC
+#HOST_PATH = '/Users/' + HOST_USER + '/vagrant/'
+
+# Host folder to sync Windows
+#TODO
+HOST_PATH = '/Users/' + HOST_USER + '/vagrant/'
+
+# Host folder to sync Linux
+#HOST_PATH = '/home/' + HOST_USER + '/vagrant/'
+
+# Where to sync to on Guest — 'vagrant' is the default user name
+GUEST_PATH = '/home/' + VM_USER + '/'
+
+Vagrant.configure(2) do |config|
+  config.vm.define VM_WEB do |web|
+    web.vm.box = VAGRANT_BOX
+    web.vm.hostname = VM_WEB
+    web.vm.network "private_network", ip: "192.168.56.102"
+    web.vm.provider "virtualbox" do |v|
+      v.memory = VM_MEM
+      v.name = VM_WEB
+      v.cpus = VM_CPU
+    end
+    web.vm.synced_folder HOST_PATH+VM_WEB, GUEST_PATH+VM_WEB
+    web.vm.synced_folder '.', '/home/'+VM_USER+'', disabled: true
+  end
+
+  config.vm.define VM_CLI do |cli|
+    cli.vm.box = VAGRANT_BOX
+    cli.vm.hostname = VM_CLI
+    cli.vm.network "private_network", ip: "192.168.56.101"
+    cli.vm.provider "virtualbox" do |v|
+      v.memory = VM_MEM
+      v.name = VM_CLI
+      v.cpus = VM_CPU
+    end
+    cli.vm.synced_folder HOST_PATH+VM_CLI, GUEST_PATH+VM_CLI
+    cli.vm.synced_folder '.', '/home/'+VM_USER+'', disabled: true
+  end
+
+  config.vm.define VM_ATK do |atk|
+    atk.vm.box = VAGRANT_BOX
+    atk.vm.hostname = VM_ATK
+    atk.vm.network "private_network", ip: "192.168.56.103"
+    atk.vm.provider "virtualbox" do |v|
+      v.memory = VM_MEM
+      v.name = VM_ATK
+      v.cpus = VM_CPU
+    end
+    atk.vm.synced_folder HOST_PATH+VM_ATK, GUEST_PATH+VM_ATK
+    atk.vm.synced_folder '.', '/home/'+VM_USER+'', disabled: true
+  end
+end

